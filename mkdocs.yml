@@ -1,0 +1,42 @@
+site_name: Tommy Jun 2026 eDo Testing Practice
+site_description: 'End-to-end testing documentation and result report for OCP test cases'
+site_author: 'Tommy'
+
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - sql
+    - json
+
+nav:
+  - Home: index.md
+
+  - Test Overview:
+      - Testing Scope: overview/testing-scope.md
+      - Test Summary: overview/test-summary.md
+
+  - Test Cases:
+      - SF_E2E_OCP_016: test-cases/SF_E2E_OCP_016.md
+      - SF_E2E_OCP_058: test-cases/SF_E2E_OCP_058.md
+      - SF_E2E_OCP_159: test-cases/SF_E2E_OCP_159.md
+      - E2E_OCP_SF022 (TODO): test-cases/E2E_OCP_SF022.md
+      - SF_E2E_OCP_162 (TODO): test-cases/SF_E2E_OCP_162.md
+      - SF_E2E_OCP_188 (TODO): test-cases/SF_E2E_OCP_188.md
+      - SF_E2E_OCP_018 (TODO): test-cases/SF_E2E_OCP_018.md
+      - SF_E2E_OCP_085 (TODO): test-cases/SF_E2E_OCP_085.md
+      - SF_E2E_OCP_001 (TODO): test-cases/SF_E2E_OCP_001.md
+      - SF_E2E_OCP_126 (TODO): test-cases/SF_E2E_OCP_126.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - tables
+  - fenced_code
+  - pymdownx.details
+  - pymdownx.superfences
+  - admonition
+  - toc:
+      permalink: true
