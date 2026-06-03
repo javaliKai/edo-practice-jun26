@@ -22,8 +22,8 @@ nav:
       - SF_E2E_OCP_058: test-cases/SF_E2E_OCP_058.md
       - SF_E2E_OCP_159: test-cases/SF_E2E_OCP_159.md
       - E2E_OCP_SF022: test-cases/E2E_OCP_SF022.md
-      - SF_E2E_OCP_162 (TODO): test-cases/SF_E2E_OCP_162.md
-      - SF_E2E_OCP_188 (TODO): test-cases/SF_E2E_OCP_188.md
+      - SF_E2E_OCP_162: test-cases/SF_E2E_OCP_162.md
+      - SF_E2E_OCP_188: test-cases/SF_E2E_OCP_188.md
       - SF_E2E_OCP_018 (TODO): test-cases/SF_E2E_OCP_018.md
       - SF_E2E_OCP_085 (TODO): test-cases/SF_E2E_OCP_085.md
       - SF_E2E_OCP_001 (TODO): test-cases/SF_E2E_OCP_001.md
