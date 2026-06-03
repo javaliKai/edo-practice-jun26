@@ -63,7 +63,7 @@
     <ul class="current">
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../E2E_OCP_SF022/">E2E_OCP_SF022 (TODO)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../E2E_OCP_SF022/">E2E_OCP_SF022</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_162/">SF_E2E_OCP_162 (TODO)</a>
                   </li>
@@ -105,12 +105,14 @@
                 <h1 id="test-ticket-sf_e2e_ocp_159">Test Ticket SF_E2E_OCP_159<a class="headerlink" href="#test-ticket-sf_e2e_ocp_159" title="Permanent link">&para;</a></h1>
 <p><strong>Description</strong>: Reconnection subscriber with new main offer</p>
 <p><strong>Pre-requisite</strong>:</p>
-<p>1.The system is running normally.
-2.<strong>Existing termination <em>postpaid</em> subscriber</strong>.
-3.The customer is not in internal blacklist.
-4.The subscriber terminated less than 30 Days.
-5.The customer is not in dunning blacklist.</p>
-<p><strong>Test Status:</strong> <strong><em>PROCESSING</em></strong></p>
+<ol>
+<li>The system is running normally.</li>
+<li><strong>Existing termination <em>postpaid</em> subscriber</strong>.</li>
+<li>The customer is not in internal blacklist.</li>
+<li>The subscriber terminated less than 30 Days.</li>
+<li>The customer is not in dunning blacklist.</li>
+</ol>
+<p><strong>Test Status:</strong> <strong><em>SUCCESS✅</em></strong></p>
 <p><strong>Steps</strong>:</p>
 <table>
 <thead>
@@ -254,13 +256,18 @@
 <p>Upon checking the SIM card state, the state is reflected correctly as 'In Use' and the service number is shown correctly (in the picture a slight cropping occured due to insufficient view space):</p>
 <p><img alt="alt text" src="../../evidence/159_service.png" /></p>
 <p><img alt="alt text" src="../../evidence/159_sim.png" /></p>
-<p>Waiting for verifiying provisioning status...</p>
+<p>The provisioning state for <code>EXP_LTE_PROFILE</code> is also recorded the correct change:</p>
+<p><img alt="alt text" src="../../evidence/159_prov.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The provisioning state information can be found in two ways: one from <strong>Order Entry</strong> &gt; <strong>Order Detail</strong>, the other from <strong>Dispatch Order Query</strong> menu.</p>
+</div>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../SF_E2E_OCP_058/" class="btn btn-neutral float-left" title="SF_E2E_OCP_058"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../E2E_OCP_SF022/" class="btn btn-neutral float-right" title="E2E_OCP_SF022 (TODO)">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../E2E_OCP_SF022/" class="btn btn-neutral float-right" title="E2E_OCP_SF022">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>

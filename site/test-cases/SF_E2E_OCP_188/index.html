@@ -61,7 +61,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_159/">SF_E2E_OCP_159</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../E2E_OCP_SF022/">E2E_OCP_SF022 (TODO)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../E2E_OCP_SF022/">E2E_OCP_SF022</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_162/">SF_E2E_OCP_162 (TODO)</a>
                   </li>
@@ -103,14 +103,15 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="test-ticket-sf_e2e_ocp_188">Test Ticket SF_E2E_OCP_188<a class="headerlink" href="#test-ticket-sf_e2e_ocp_188" title="Permanent link">&para;</a></h1>
-<p><strong>Description</strong>:
-<strong>Pre-requisite</strong>:</p>
-<ul>
-<li>A</li>
-<li>B</li>
-<li>C</li>
-</ul>
-<p><strong>Test Status:</strong> SUCCESS</p>
+<p><strong>Description</strong>: When customer <strong>already purchased</strong> the starter pack, then user need to activate the starter pack. After starter pack is activated, customer can start use telco service（Existed Customer）.</p>
+<p><strong>Pre-requisite</strong>:</p>
+<ol>
+<li>The system is running normally.</li>
+<li>The status is initial for existed starter pack subscription.</li>
+<li>The starter pack resources  is same with login user organization.</li>
+<li>The resource status for the starter pack is ‘Sold’. and state is unblock</li>
+</ol>
+<p><strong>Test Status:</strong> <strong><em>SUCCESS✅</em></strong></p>
 <p><strong>Steps</strong>:</p>
 <table>
 <thead>
@@ -124,13 +125,99 @@
 <tbody>
 <tr>
 <td>1</td>
-<td></td>
-<td></td>
-<td></td>
+<td>Go to <strong>'Starter Pack' GUI</strong>.</td>
+<td><strong>Customer Name:</strong> AR-SP-E2E<br><strong>State of MSISDN:</strong><br>1. Sold - Unblock = 628811701183<br>2. Stock In - Block = 628811701190<br>3. Stock In - Unblock = 628811701188</td>
+<td>Enter <strong>'Starter Pack' GUI</strong> successfully.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Retrieve existing individual customer.</td>
+<td>-</td>
+<td>Query customer successfully.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Query a starter pack subscription by service number.</td>
+<td>-</td>
+<td>Query starter pack subscription successfully and display the correct offer name, service number, SIM serial number, effective date, and status.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Select the starter pack subscription and click <strong>'Active'</strong>.</td>
+<td>-</td>
+<td>It jumps to the next page successfully.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>On the next page, supplement the required information (e.g., preferred language) and click <strong>'Next'</strong>.</td>
+<td>-</td>
+<td>Supplementary information is added successfully.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Review activation order information, such as basic information and order item list.</td>
+<td>-</td>
+<td>Order information is correct.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Review and check the Terms &amp; Conditions (T&amp;C).</td>
+<td>-</td>
+<td>Review and check the T&amp;C successfully.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>At the payment counter page, pay the order fee.</td>
+<td>-</td>
+<td>Order fee is paid successfully.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Submit the order and check the order status.</td>
+<td>-</td>
+<td>Order is generated successfully and reaches <strong>Completion</strong> status.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Check and print <strong>'Print e-RF'</strong>.</td>
+<td>-</td>
+<td>Check and print <strong>'Print e-RF'</strong> successfully.</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Enter <strong>[Subscriber Detail]</strong> and check subscriber details.</td>
+<td>-</td>
+<td>The subscription status is <strong>Active</strong> and all other information is correct.</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Evidence Results:</strong></p>
+<p>Initially, starter pack is in banned state. To lift the ban, need to go to the <strong>Goods Sell</strong> then purchase the starter pack in advance:</p>
+<p><img alt="alt text" src="../../evidence/188_sell.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Can query the information of available starter pack inside <strong>Goods Instance Query</strong> menu.</p>
+</div>
+<p>For reference, the state of the starter pack before purchase is shown below:</p>
+<p><img alt="alt text" src="../../evidence/188_init.png" /></p>
+<p>And after purchase is complete, the state is correctly showing N as not blocked anymore:</p>
+<p><img alt="alt text" src="../../evidence/188_purchase.png" /></p>
+<p>The state "Sold" is correctly shown in the Goods Instance query after buying the SP:</p>
+<p><img alt="alt text" src="../../evidence/188_sold.png" /></p>
+<p>Starter pack can be queried successfully and the "Activate" button is able to be pressed:</p>
+<p><img alt="alt text" src="../../evidence/188_activate.png" /></p>
+<p>Order information can be seen correctly:</p>
+<p><img alt="alt text" src="../../evidence/188_order.png" /></p>
+<p>T&amp;C is shown normally and can be bypassed in this testing:</p>
+<p><img alt="alt text" src="../../evidence/188_tnc.png" /></p>
+<p>Order fee page is shown correctly, currently no fee since no additional IPP is selected:</p>
+<p><img alt="alt text" src="../../evidence/188_order_fee.png" /></p>
+<p>Order can be submitted successfully:</p>
+<p><img alt="alt text" src="../../evidence/188_order_scs.png" /></p>
+<p>ERF is also shown correclt, stating "Starter Pack Activation" as the type of transaction:</p>
+<p><img alt="alt text" src="../../evidence/188_ERF.png" /></p>
+<p>Starter pack activation order is displayed correctly in order page and the order status is "Completion", meaning the order has been successfully completed:</p>
+<p><img alt="alt text" src="../../evidence/188_complete.png" /></p>
               
             </div>
           </div><footer>

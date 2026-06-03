@@ -61,7 +61,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_159/">SF_E2E_OCP_159</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../E2E_OCP_SF022/">E2E_OCP_SF022 (TODO)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../E2E_OCP_SF022/">E2E_OCP_SF022</a>
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">SF_E2E_OCP_162 (TODO)</a>
     <ul class="current">
@@ -103,14 +103,14 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="test-ticket-sf_e2e_ocp_162">Test Ticket SF_E2E_OCP_162<a class="headerlink" href="#test-ticket-sf_e2e_ocp_162" title="Permanent link">&para;</a></h1>
-<p><strong>Description</strong>:
-<strong>Pre-requisite</strong>:</p>
-<ul>
-<li>A</li>
-<li>B</li>
-<li>C</li>
-</ul>
-<p><strong>Test Status:</strong> SUCCESS</p>
+<p><strong>Description</strong>: Reconnection for termination MDN after X days (fail)</p>
+<p><strong>Pre-requisite</strong>:</p>
+<ol>
+<li>The system is running normally.</li>
+<li>Existing termination subscriber.</li>
+<li>the termination MDN after X days</li>
+</ol>
+<p><strong>Test Status:</strong> <strong><em>SUCCESS✅</em></strong></p>
 <p><strong>Steps</strong>:</p>
 <table>
 <thead>
@@ -124,18 +124,46 @@
 <tbody>
 <tr>
 <td>1</td>
-<td></td>
-<td></td>
-<td></td>
+<td>Go to <strong>‘Order Entry’ GUI</strong></td>
+<td>-</td>
+<td>Got to <strong>'Order Entry' GUI</strong> successfully.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Query termination subscription</td>
+<td>-</td>
+<td>Query termination subscription successfully.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Click <strong>[Operation → Reconnection]</strong> in 'Subscriber' Tab</td>
+<td>-</td>
+<td>Prompt: More than X days. Not allowed to perform reconnection.</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Evidence Results:</strong></p>
+<p>The expired terminated subscribed can be simulated by doing manual update to the <code>cc.subs</code> database. Full query is shown below:</p>
+<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">prod</span>
+<span class="k">SET</span><span class="w"> </span>
+<span class="w">  </span><span class="n">prod_state_date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TO_DATE</span><span class="p">(</span><span class="s1">&#39;2025-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;YYYY-MM-DD&#39;</span><span class="p">),</span>
+<span class="w">  </span><span class="n">update_date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TO_DATE</span><span class="p">(</span><span class="s1">&#39;2025-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;YYYY-MM-DD&#39;</span><span class="p">)</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">cust_id</span><span class="o">=</span><span class="mi">3014104699</span>
+<span class="w">  </span><span class="k">AND</span><span class="w"> </span><span class="n">subs_plan_id</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span>
+<span class="w">  </span><span class="k">AND</span><span class="w"> </span><span class="n">prod_state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;B&#39;</span>
+<span class="w">  </span><span class="k">AND</span><span class="w"> </span><span class="n">prod_id</span><span class="o">=</span><span class="mi">30127627143</span>
+<span class="p">;</span>
+<span class="k">COMMIT</span><span class="p">;</span>
+</code></pre></div>
+<p>The terminated subscription can be queried successfully:</p>
+<p><img alt="alt text" src="../../evidence/162_term_quer.png" /></p>
+<p>The reconnection option is greyed-out and not available. The prompt also showing hint that the current terminated subscriber already exceed 180 days:</p>
+<p><img alt="alt text" src="../../evidence/162_prompt.png" /></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../E2E_OCP_SF022/" class="btn btn-neutral float-left" title="E2E_OCP_SF022 (TODO)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../E2E_OCP_SF022/" class="btn btn-neutral float-left" title="E2E_OCP_SF022"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../SF_E2E_OCP_188/" class="btn btn-neutral float-right" title="SF_E2E_OCP_188 (TODO)">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 

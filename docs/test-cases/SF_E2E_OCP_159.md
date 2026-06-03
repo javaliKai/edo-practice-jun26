@@ -4,13 +4,13 @@
 
 **Pre-requisite**:
 
-1.The system is running normally.
-2.**Existing termination *postpaid* subscriber**.
-3.The customer is not in internal blacklist.
-4.The subscriber terminated less than 30 Days.
-5.The customer is not in dunning blacklist.
+1. The system is running normally.
+2. **Existing termination *postpaid* subscriber**.
+3. The customer is not in internal blacklist.
+4. The subscriber terminated less than 30 Days.
+5. The customer is not in dunning blacklist.
 
-**Test Status:** ***PROCESSING***
+**Test Status:** ***SUCCESS✅***
 
 **Steps**:
 
@@ -85,5 +85,10 @@ Upon checking the SIM card state, the state is reflected correctly as 'In Use' a
 
 ![alt text](../evidence/159_sim.png)
 
-Waiting for verifiying provisioning status...
+The provisioning state for `EXP_LTE_PROFILE` is also recorded the correct change:
+
+![alt text](../evidence/159_prov.png)
+
+!!! tip "Tip"
+    The provisioning state information can be found in two ways: one from **Order Entry** > **Order Detail**, the other from **Dispatch Order Query** menu.
 

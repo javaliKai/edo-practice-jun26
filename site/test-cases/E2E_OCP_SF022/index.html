@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Tommy" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>E2E_OCP_SF022 (TODO) - Tommy Jun 2026 eDo Testing Practice</title>
+    <title>E2E_OCP_SF022 - Tommy Jun 2026 eDo Testing Practice</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "E2E_OCP_SF022 (TODO)";
+        var mkdocs_page_name = "E2E_OCP_SF022";
         var mkdocs_page_input_path = "test-cases\\E2E_OCP_SF022.md";
         var mkdocs_page_url = null;
       </script>
@@ -61,7 +61,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_159/">SF_E2E_OCP_159</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">E2E_OCP_SF022 (TODO)</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">E2E_OCP_SF022</a>
     <ul class="current">
     </ul>
                   </li>
@@ -93,7 +93,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Test Cases</li>
-      <li class="breadcrumb-item active">E2E_OCP_SF022 (TODO)</li>
+      <li class="breadcrumb-item active">E2E_OCP_SF022</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -103,14 +103,13 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="test-ticket-e2e_ocp_sf022">Test Ticket E2E_OCP_SF022<a class="headerlink" href="#test-ticket-e2e_ocp_sf022" title="Permanent link">&para;</a></h1>
-<p><strong>Description</strong>:
-<strong>Pre-requisite</strong>:</p>
-<ul>
-<li>A</li>
-<li>B</li>
-<li>C</li>
-</ul>
-<p><strong>Test Status:</strong> SUCCESS</p>
+<p><strong>Description</strong>: Cancel SIM replacement postdating order success</p>
+<p><strong>Pre-requisite</strong>:</p>
+<ol>
+<li>The system is running normally.</li>
+<li>Existing SIM replacement postdating order.</li>
+</ol>
+<p><strong>Test Status:</strong> <strong><em>SUCCESS✅</em></strong></p>
 <p><strong>Steps</strong>:</p>
 <table>
 <thead>
@@ -124,13 +123,39 @@
 <tbody>
 <tr>
 <td>1</td>
-<td></td>
-<td></td>
-<td></td>
+<td>Go to <strong>'Order Entry' GUI</strong>.</td>
+<td>-</td>
+<td>Open <strong>'Order Entry' GUI</strong> successfully.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Query MDN with SIM replacement postdating order.</td>
+<td>-</td>
+<td>Select MDN with SIM replacement postdating order successfully.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Cancel SIM replacement postdating order.</td>
+<td>-</td>
+<td>Cancel SIM replacement postdating order successfully.</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Evidence Results:</strong></p>
+<p>Postdating order can be queried successfully:</p>
+<p><img alt="alt text" src="../../evidence/022_query.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We can make an order to be in postading state manually. Upon issuing order, make sure to check the order reason either one of these: <strong><em>Document need validation</em></strong>, <strong><em>request from different customer</em></strong>, and <strong><em>others</em></strong>.</p>
+</div>
+<p>Cancel order option is available and can be clicked:</p>
+<p><img alt="alt text" src="../../evidence/022_option.png" /></p>
+<p>Cancel order from is correctly shown and form is able to fill:</p>
+<p><img alt="alt text" src="../../evidence/022_form.png" /></p>
+<p>Upon clicking, success message is shown:</p>
+<p><img alt="alt text" src="../../evidence/022_msg.png" /></p>
+<p>After closing the success message, future order is now empty, cancel postdating order is successfully done:</p>
+<p><img alt="alt text" src="../../evidence/022_future.png" /></p>
               
             </div>
           </div><footer>
