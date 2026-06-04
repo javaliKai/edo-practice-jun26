@@ -13,21 +13,17 @@ theme:
 nav:
   - Home: index.md
 
-  - Test Overview:
-      - Testing Scope: overview/testing-scope.md
-      - Test Summary: overview/test-summary.md
-
   - Test Cases:
       - SF_E2E_OCP_016: test-cases/SF_E2E_OCP_016.md
       - SF_E2E_OCP_058: test-cases/SF_E2E_OCP_058.md
       - SF_E2E_OCP_159: test-cases/SF_E2E_OCP_159.md
-      - E2E_OCP_SF022: test-cases/E2E_OCP_SF022.md
+      - SF_E2E_OCP_022: test-cases/E2E_OCP_SF022.md
       - SF_E2E_OCP_162: test-cases/SF_E2E_OCP_162.md
       - SF_E2E_OCP_188: test-cases/SF_E2E_OCP_188.md
-      - SF_E2E_OCP_018 (TODO): test-cases/SF_E2E_OCP_018.md
-      - SF_E2E_OCP_085 (TODO): test-cases/SF_E2E_OCP_085.md
-      - SF_E2E_OCP_001 (TODO): test-cases/SF_E2E_OCP_001.md
-      - SF_E2E_OCP_126 (TODO): test-cases/SF_E2E_OCP_126.md
+      - SF_E2E_OCP_018: test-cases/SF_E2E_OCP_018.md
+      - SF_E2E_OCP_085: test-cases/SF_E2E_OCP_085.md
+      - SF_E2E_OCP_001: test-cases/SF_E2E_OCP_001.md
+      - SF_E2E_OCP_126: test-cases/SF_E2E_OCP_126.md
 
 plugins:
   - search
