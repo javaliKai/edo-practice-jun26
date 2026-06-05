@@ -14,16 +14,16 @@ nav:
   - Home: index.md
 
   - Test Cases:
-      - SF_E2E_OCP_016: test-cases/SF_E2E_OCP_016.md
-      - SF_E2E_OCP_058: test-cases/SF_E2E_OCP_058.md
-      - SF_E2E_OCP_159: test-cases/SF_E2E_OCP_159.md
-      - SF_E2E_OCP_022: test-cases/E2E_OCP_SF022.md
-      - SF_E2E_OCP_162: test-cases/SF_E2E_OCP_162.md
-      - SF_E2E_OCP_188: test-cases/SF_E2E_OCP_188.md
-      - SF_E2E_OCP_018: test-cases/SF_E2E_OCP_018.md
-      - SF_E2E_OCP_085: test-cases/SF_E2E_OCP_085.md
-      - SF_E2E_OCP_001: test-cases/SF_E2E_OCP_001.md
-      - SF_E2E_OCP_126: test-cases/SF_E2E_OCP_126.md
+      - SF_E2E_OCP_016 (First Call Activation): test-cases/SF_E2E_OCP_016.md
+      - SF_E2E_OCP_058 (Modify Offer IPP): test-cases/SF_E2E_OCP_058.md
+      - SF_E2E_OCP_159 (Reconnection Postpaid): test-cases/SF_E2E_OCP_159.md
+      - E2E_OCP_SF022 (Cancel Postdating): test-cases/E2E_OCP_SF022.md
+      - SF_E2E_OCP_162 (Reconnection >180 Days): test-cases/SF_E2E_OCP_162.md
+      - SF_E2E_OCP_188 (Starter Pack Activation): test-cases/SF_E2E_OCP_188.md
+      - SF_E2E_OCP_018 (SIM Replacement): test-cases/SF_E2E_OCP_018.md
+      - SF_E2E_OCP_085 (Change Main Offer): test-cases/SF_E2E_OCP_085.md
+      - SF_E2E_OCP_001 (New Connection Prepaid): test-cases/SF_E2E_OCP_001.md
+      - SF_E2E_OCP_126 (Transfer Ownership): test-cases/SF_E2E_OCP_126.md
 
 plugins:
   - search
