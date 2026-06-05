@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Tommy" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>SF_E2E_OCP_188 (Starter Pack Activation) - Tommy Jun 2026 eDo Testing Practice</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SF_E2E_OCP_188 (Starter Pack Activation)";
+        var mkdocs_page_input_path = "test-cases/SF_E2E_OCP_188.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/sql.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/json.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Tommy Jun 2026 eDo Testing Practice
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Test Cases</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_016/">SF_E2E_OCP_016 (First Call Activation)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_058/">SF_E2E_OCP_058 (Modify Offer IPP)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_159/">SF_E2E_OCP_159 (Reconnection Postpaid)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../E2E_OCP_SF022/">E2E_OCP_SF022 (Cancel Postdating)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_162/">SF_E2E_OCP_162 (Reconnection >180 Days)</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">SF_E2E_OCP_188 (Starter Pack Activation)</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_018/">SF_E2E_OCP_018 (SIM Replacement)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_085/">SF_E2E_OCP_085 (Change Main Offer)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_001/">SF_E2E_OCP_001 (New Connection Prepaid)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_126/">SF_E2E_OCP_126 (Transfer Ownership)</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Tommy Jun 2026 eDo Testing Practice</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Test Cases</li>
+      <li class="breadcrumb-item active">SF_E2E_OCP_188 (Starter Pack Activation)</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="test-ticket-sf_e2e_ocp_188">Test Ticket SF_E2E_OCP_188<a class="headerlink" href="#test-ticket-sf_e2e_ocp_188" title="Permanent link">&para;</a></h1>
+<p><strong>Description</strong>: When customer <strong>already purchased</strong> the starter pack, then user need to activate the starter pack. After starter pack is activated, customer can start use telco service（Existed Customer）.</p>
+<p><strong>Pre-requisite</strong>:</p>
+<ol>
+<li>The system is running normally.</li>
+<li>The status is initial for existed starter pack subscription.</li>
+<li>The starter pack resources  is same with login user organization.</li>
+<li>The resource status for the starter pack is ‘Sold’. and state is unblock</li>
+</ol>
+<p><strong>Test Status:</strong> <strong><em>SUCCESS✅</em></strong></p>
+<p><strong>Steps</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>No.</th>
+<th>Step</th>
+<th>Data</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Go to <strong>'Starter Pack' GUI</strong>.</td>
+<td><strong>Customer Name:</strong> AR-SP-E2E<br><strong>State of MSISDN:</strong><br>1. Sold - Unblock = 628811701183<br>2. Stock In - Block = 628811701190<br>3. Stock In - Unblock = 628811701188</td>
+<td>Enter <strong>'Starter Pack' GUI</strong> successfully.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Retrieve existing individual customer.</td>
+<td>-</td>
+<td>Query customer successfully.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Query a starter pack subscription by service number.</td>
+<td>-</td>
+<td>Query starter pack subscription successfully and display the correct offer name, service number, SIM serial number, effective date, and status.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Select the starter pack subscription and click <strong>'Active'</strong>.</td>
+<td>-</td>
+<td>It jumps to the next page successfully.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>On the next page, supplement the required information (e.g., preferred language) and click <strong>'Next'</strong>.</td>
+<td>-</td>
+<td>Supplementary information is added successfully.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Review activation order information, such as basic information and order item list.</td>
+<td>-</td>
+<td>Order information is correct.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Review and check the Terms &amp; Conditions (T&amp;C).</td>
+<td>-</td>
+<td>Review and check the T&amp;C successfully.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>At the payment counter page, pay the order fee.</td>
+<td>-</td>
+<td>Order fee is paid successfully.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Submit the order and check the order status.</td>
+<td>-</td>
+<td>Order is generated successfully and reaches <strong>Completion</strong> status.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Check and print <strong>'Print e-RF'</strong>.</td>
+<td>-</td>
+<td>Check and print <strong>'Print e-RF'</strong> successfully.</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Enter <strong>[Subscriber Detail]</strong> and check subscriber details.</td>
+<td>-</td>
+<td>The subscription status is <strong>Active</strong> and all other information is correct.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Evidence Results:</strong></p>
+<p>Initially, starter pack is in banned state. To lift the ban, need to go to the <strong>Goods Sell</strong> then purchase the starter pack in advance:</p>
+<p><img alt="alt text" src="../../evidence/188_sell.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Can query the information of available starter pack inside <strong>Goods Instance Query</strong> menu.</p>
+</div>
+<p>For reference, the state of the starter pack before purchase is shown below:</p>
+<p><img alt="alt text" src="../../evidence/188_init.png" /></p>
+<p>And after purchase is complete, the state is correctly showing N as not blocked anymore:</p>
+<p><img alt="alt text" src="../../evidence/188_purchase.png" /></p>
+<p>The state "Sold" is correctly shown in the Goods Instance query after buying the SP:</p>
+<p><img alt="alt text" src="../../evidence/188_sold.png" /></p>
+<p>Starter pack can be queried successfully and the "Activate" button is able to be pressed:</p>
+<p><img alt="alt text" src="../../evidence/188_activate.png" /></p>
+<p>Order information can be seen correctly:</p>
+<p><img alt="alt text" src="../../evidence/188_order.png" /></p>
+<p>T&amp;C is shown normally and can be bypassed in this testing:</p>
+<p><img alt="alt text" src="../../evidence/188_tnc.png" /></p>
+<p>Order fee page is shown correctly, currently no fee since no additional IPP is selected:</p>
+<p><img alt="alt text" src="../../evidence/188_order_fee.png" /></p>
+<p>Order can be submitted successfully:</p>
+<p><img alt="alt text" src="../../evidence/188_order_scs.png" /></p>
+<p>ERF is also shown correclt, stating "Starter Pack Activation" as the type of transaction:</p>
+<p><img alt="alt text" src="../../evidence/188_ERF.png" /></p>
+<p>Starter pack activation order is displayed correctly in order page and the order status is "Completion", meaning the order has been successfully completed:</p>
+<p><img alt="alt text" src="../../evidence/188_complete.png" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../SF_E2E_OCP_162/" class="btn btn-neutral float-left" title="SF_E2E_OCP_162 (Reconnection >180 Days)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../SF_E2E_OCP_018/" class="btn btn-neutral float-right" title="SF_E2E_OCP_018 (SIM Replacement)">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../SF_E2E_OCP_162/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../SF_E2E_OCP_018/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

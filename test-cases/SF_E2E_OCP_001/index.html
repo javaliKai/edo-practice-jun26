@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Tommy" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>SF_E2E_OCP_001 (New Connection Prepaid) - Tommy Jun 2026 eDo Testing Practice</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SF_E2E_OCP_001 (New Connection Prepaid)";
+        var mkdocs_page_input_path = "test-cases/SF_E2E_OCP_001.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/sql.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/json.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Tommy Jun 2026 eDo Testing Practice
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Test Cases</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_016/">SF_E2E_OCP_016 (First Call Activation)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_058/">SF_E2E_OCP_058 (Modify Offer IPP)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_159/">SF_E2E_OCP_159 (Reconnection Postpaid)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../E2E_OCP_SF022/">E2E_OCP_SF022 (Cancel Postdating)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_162/">SF_E2E_OCP_162 (Reconnection >180 Days)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_188/">SF_E2E_OCP_188 (Starter Pack Activation)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_018/">SF_E2E_OCP_018 (SIM Replacement)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_085/">SF_E2E_OCP_085 (Change Main Offer)</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">SF_E2E_OCP_001 (New Connection Prepaid)</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_126/">SF_E2E_OCP_126 (Transfer Ownership)</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Tommy Jun 2026 eDo Testing Practice</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Test Cases</li>
+      <li class="breadcrumb-item active">SF_E2E_OCP_001 (New Connection Prepaid)</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="test-ticket-sf_e2e_ocp_001">Test Ticket SF_E2E_OCP_001<a class="headerlink" href="#test-ticket-sf_e2e_ocp_001" title="Permanent link">&para;</a></h1>
+<p><strong>Description</strong>: Test new connection using prepaid main offer:SF Prepaid Kartu Smartfren Cellullar and additional offer : Kuota 6 GB.</p>
+<p>Attempt to Upload attachment file name over 150 characters/less than 150 characters.</p>
+<p><strong>Pre-requisite</strong>:</p>
+<ol>
+<li>
+<p>System is running normally.</p>
+</li>
+<li>
+<p>Config is effective.</p>
+</li>
+<li>
+<p>The prepaid account e-bill email is empty ,the customer contact email has value.</p>
+</li>
+</ol>
+<p><strong>Test Status:</strong> <strong><em>SUCCESS✅</em></strong></p>
+<p><strong>Steps</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">No.</th>
+<th style="text-align: left;">Step</th>
+<th style="text-align: left;">Data</th>
+<th style="text-align: left;">Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Retrieve customer</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Retrieve customer successfully</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Select offer</td>
+<td style="text-align: left;">Main offer:SF Prepaid Kartu Smartfren Cellullar; Additional offer : Kuota 6 GB</td>
+<td style="text-align: left;">Select offer successfully</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Select preferred language</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Select preferred language successfully</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Select account</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Select account successfully</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Select preferred contact channel</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Select preferred contact channel successfully</td>
+</tr>
+<tr>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">Input social media info</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Input social media info successfully</td>
+</tr>
+<tr>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">Select/Input Other Attribute</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Select/Input Other Attribute successfully</td>
+</tr>
+<tr>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">Select number</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Select MSISDN successfully</td>
+</tr>
+<tr>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">Select additional offer</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Select additional offer successfully</td>
+</tr>
+<tr>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">Select contact information</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Select contact information successfully</td>
+</tr>
+<tr>
+<td style="text-align: left;">11</td>
+<td style="text-align: left;">Upload attachment file name over/less than 5.00MB</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">If upload attachment file name over 5.00MB, uploading file will fail. Otherwise, it will be success.</td>
+</tr>
+<tr>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">Input/scan ICCID</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Input/scan ICCID successfully</td>
+</tr>
+<tr>
+<td style="text-align: left;">13</td>
+<td style="text-align: left;">Order Review</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Order Review successfully</td>
+</tr>
+<tr>
+<td style="text-align: left;">14</td>
+<td style="text-align: left;">Payment</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Payment successfully</td>
+</tr>
+<tr>
+<td style="text-align: left;">15</td>
+<td style="text-align: left;">Order Submission</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Order Submission successfully</td>
+</tr>
+<tr>
+<td style="text-align: left;">16</td>
+<td style="text-align: left;">Review e-Receipt and e-RF</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Review e-Receipt and e-RF successfully</td>
+</tr>
+<tr>
+<td style="text-align: left;">17</td>
+<td style="text-align: left;">Check order state and check additional offer effect date and expire date</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Order completed successfully, the additional offer effect date and expire date display correctly.</td>
+</tr>
+<tr>
+<td style="text-align: left;">18</td>
+<td style="text-align: left;">Check order detail attachment</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">The order detail attachment name displays normally.</td>
+</tr>
+<tr>
+<td style="text-align: left;">19</td>
+<td style="text-align: left;">Check order detail to resend e-Request Form, click send email</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Default email address is customer contact email, and it can choose same customer other account E-Bill email.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Evidence Results:</strong></p>
+<p>Customer retrieved successfully:</p>
+<p><img alt="alt text" src="../../evidence/001_retrieve_customer.png" /></p>
+<p>Main offer (SF Prepaid Kartu Smartfren Cellular) and additional offer (Kuota 6 GB) selected:</p>
+<p><img alt="alt text" src="../../evidence/001_select_offer.png" /></p>
+<p>Preferred language selected:</p>
+<p><img alt="alt text" src="../evidence/001_language.png" /></p>
+<p>Account is automatically generated by the system (for prepaid only), all basic informations are succesfully filled, as well as MSISDN:</p>
+<p><img alt="alt text" src="../../evidence/001_basic_info.png" /></p>
+<p>Contact information selected:</p>
+<p><img alt="alt text" src="../../evidence/001_contact_info.png" /></p>
+<p>Attachment upload tested - file over 5.00MB rejected, file under 5.00MB accepted:</p>
+<p><img alt="alt text" src="../../evidence/001_attachment.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For file above 5MB, the system currently only stall and no error or warning shown, only hint that "The file size limit is 5.00MB."</p>
+</div>
+<p>ICCID input/scanned successfully:</p>
+<p><img alt="alt text" src="../../evidence/001_iccid.png" /></p>
+<p>Order review completed:</p>
+<p><img alt="alt text" src="../../evidence/001_order_review.png" /></p>
+<p>Order submitted successfully:</p>
+<p><img alt="alt text" src="../../evidence/001_submission.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Payment is waivered.</p>
+</div>
+<p>e-Receipt and e-RF reviewed:</p>
+<p><img alt="alt text" src="../../evidence/001_receipts.png" /></p>
+<p>Order completed, subscriber additional offer effect date and expire date displayed correctly:</p>
+<p><img alt="alt text" src="../../evidence/001_order_complete.png" /></p>
+<p>Order detail attachment name displayed normally:</p>
+<p><img alt="alt text" src="../../evidence/001_attachment_name.png" /></p>
+<p>Resend e-Request Form - default email is customer contact email, other account E-Bill email selectable:</p>
+<p><img alt="alt text" src="../../evidence/001_resend_email.png" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../SF_E2E_OCP_085/" class="btn btn-neutral float-left" title="SF_E2E_OCP_085 (Change Main Offer)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../SF_E2E_OCP_126/" class="btn btn-neutral float-right" title="SF_E2E_OCP_126 (Transfer Ownership)">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../SF_E2E_OCP_085/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../SF_E2E_OCP_126/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

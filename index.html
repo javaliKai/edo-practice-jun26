@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="End-to-end testing documentation and result report for OCP test cases" /><meta name="author" content="Tommy" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Tommy Jun 2026 eDo Testing Practice</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Home";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/sql.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/json.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> Tommy Jun 2026 eDo Testing Practice
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Home</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#test-cases-summary">Test Cases Summary</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#test-case-categories">Test Case Categories</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#1-order-management-3-tests">1. Order Management (3 tests)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#2-subscriber-lifecycle-4-tests">2. Subscriber Lifecycle (4 tests)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#3-customer-operations-2-tests">3. Customer Operations (2 tests)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#4-validation-edge-cases-1-test">4. Validation &amp; Edge Cases (1 test)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#key-features-tested">Key Features Tested</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#common-patterns-observed">Common Patterns Observed</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#lessons-learned">Lessons Learned</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#database-queries-reference">Database Queries Reference</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Test Cases</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="test-cases/SF_E2E_OCP_016/">SF_E2E_OCP_016 (First Call Activation)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="test-cases/SF_E2E_OCP_058/">SF_E2E_OCP_058 (Modify Offer IPP)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="test-cases/SF_E2E_OCP_159/">SF_E2E_OCP_159 (Reconnection Postpaid)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="test-cases/E2E_OCP_SF022/">E2E_OCP_SF022 (Cancel Postdating)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="test-cases/SF_E2E_OCP_162/">SF_E2E_OCP_162 (Reconnection >180 Days)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="test-cases/SF_E2E_OCP_188/">SF_E2E_OCP_188 (Starter Pack Activation)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="test-cases/SF_E2E_OCP_018/">SF_E2E_OCP_018 (SIM Replacement)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="test-cases/SF_E2E_OCP_085/">SF_E2E_OCP_085 (Change Main Offer)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="test-cases/SF_E2E_OCP_001/">SF_E2E_OCP_001 (New Connection Prepaid)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="test-cases/SF_E2E_OCP_126/">SF_E2E_OCP_126 (Transfer Ownership)</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">Tommy Jun 2026 eDo Testing Practice</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Home</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="welcome-to-my-edo-practice-notebook">Welcome to My eDo Practice Notebook!<a class="headerlink" href="#welcome-to-my-edo-practice-notebook" title="Permanent link">&para;</a></h1>
+<p>This file is a log to note all of the findings and prove that I have practiced doing test cases in eDo.</p>
+<p>Goal is to be familiar with the test case and try to learn writing a good documentation as well using MKDocs 🤞.</p>
+<p>Environment used during testing is the <strong><em>REGRESSION</em></strong> environment. However at 2026-06-03, the <strong><em>REGRESSION</em></strong> environment is under maintenance. So, some of the tests are conducted in <strong><em>UAT</em></strong> as well.</p>
+<hr />
+<h2 id="test-cases-summary">Test Cases Summary<a class="headerlink" href="#test-cases-summary" title="Permanent link">&para;</a></h2>
+<h3 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Total Test Cases</strong></td>
+<td>10</td>
+</tr>
+<tr>
+<td><strong>Passed</strong></td>
+<td>10 ✅</td>
+</tr>
+<tr>
+<td><strong>Failed</strong></td>
+<td>0 ❌</td>
+</tr>
+<tr>
+<td><strong>Success Rate</strong></td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="test-case-categories">Test Case Categories<a class="headerlink" href="#test-case-categories" title="Permanent link">&para;</a></h3>
+<h4 id="1-order-management-3-tests">1. Order Management (3 tests)<a class="headerlink" href="#1-order-management-3-tests" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><a href="test-cases/E2E_OCP_SF022/">E2E_OCP_SF022</a></strong> - Cancel SIM replacement postdating order</li>
+<li><strong><a href="test-cases/SF_E2E_OCP_001/">SF_E2E_OCP_001</a></strong> - New connection with prepaid main offer + additional offer</li>
+<li><strong><a href="test-cases/SF_E2E_OCP_018/">SF_E2E_OCP_018</a></strong> - SIM replacement order (prepaid &amp; postpaid)</li>
+</ul>
+<h4 id="2-subscriber-lifecycle-4-tests">2. Subscriber Lifecycle (4 tests)<a class="headerlink" href="#2-subscriber-lifecycle-4-tests" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><a href="test-cases/SF_E2E_OCP_016/">SF_E2E_OCP_016</a></strong> - First Call Activation for inactive prepaid subscriber</li>
+<li><strong><a href="test-cases/SF_E2E_OCP_058/">SF_E2E_OCP_058</a></strong> - Active subscriber orders IPP via Modify Offer</li>
+<li><strong><a href="test-cases/SF_E2E_OCP_085/">SF_E2E_OCP_085</a></strong> - Change main offer with additional offer (effective immediately)</li>
+<li><strong><a href="test-cases/SF_E2E_OCP_159/">SF_E2E_OCP_159</a></strong> - Reconnection of terminated postpaid subscriber with new offer</li>
+</ul>
+<h4 id="3-customer-operations-2-tests">3. Customer Operations (2 tests)<a class="headerlink" href="#3-customer-operations-2-tests" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><a href="test-cases/SF_E2E_OCP_126/">SF_E2E_OCP_126</a></strong> - Transfer ownership for postpaid subscriber</li>
+<li><strong><a href="test-cases/SF_E2E_OCP_188/">SF_E2E_OCP_188</a></strong> - Starter pack activation for existing customer</li>
+</ul>
+<h4 id="4-validation-edge-cases-1-test">4. Validation &amp; Edge Cases (1 test)<a class="headerlink" href="#4-validation-edge-cases-1-test" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><a href="test-cases/SF_E2E_OCP_162/">SF_E2E_OCP_162</a></strong> - Reconnection failure after X days (&gt;180 days limit)</li>
+</ul>
+<h3 id="key-features-tested">Key Features Tested<a class="headerlink" href="#key-features-tested" title="Permanent link">&para;</a></h3>
+<p>✅ <strong>Prepaid Services</strong>: New connections, activations, IPP modifications, balance payments<br />
+✅ <strong>Postpaid Services</strong>: SIM replacement, offer changes, ownership transfer, reconnections<br />
+✅ <strong>Order Processing</strong>: Creation, review, payment, submission, provisioning, completion<br />
+✅ <strong>Validation Rules</strong>: File size limits (5MB), ICCID states, subscriber status checks, overdue amounts<br />
+✅ <strong>Notifications</strong>: SMS/email delivery, CIC whitelist management<br />
+✅ <strong>Documentation</strong>: e-Receipt, e-Request Form (e-RF), POS receipts, eSIM QR codes<br />
+✅ <strong>Database Verification</strong>: SQL queries for <code>ic_acc_nbr</code>, <code>ic_sim_card</code>, <code>spn.sa_order</code> tables  </p>
+<h3 id="common-patterns-observed">Common Patterns Observed<a class="headerlink" href="#common-patterns-observed" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Order Flow</strong>: Order Entry → Retrieve Customer → Select Operation → Review → T&amp;C → Payment → Submission → Completion</li>
+<li><strong>Pre-validation</strong>: System checks pending orders, overdue amounts, subscriber status before proceeding</li>
+<li><strong>Payment Methods</strong>: Cash (service number only) vs Balance (service number + account info)</li>
+<li><strong>State Transitions</strong>: Proper tracking of subscriber/SIM card states (Available → Locked → In Use)</li>
+<li><strong>Evidence Collection</strong>: Screenshots at each step + database verification for critical state changes</li>
+</ol>
+<h3 id="lessons-learned">Lessons Learned<a class="headerlink" href="#lessons-learned" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Attachment Upload</strong>: Files &gt;5MB cause system stall without clear error messages</li>
+<li><strong>CIC Whitelist</strong>: Customer contacts must be whitelisted for successful notification delivery</li>
+<li><strong>ICCID States</strong>: Automatic state changes occur (Available → Locked upon input → In Use after completion)</li>
+<li><strong>Provisioning Tracking</strong>: Order provisioning states can be queried from <code>spn.sa_order</code> table</li>
+<li><strong>Termination Limits</strong>: Reconnection not allowed after 180 days from termination date</li>
+</ul>
+<h3 id="database-queries-reference">Database Queries Reference<a class="headerlink" href="#database-queries-reference" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Check service number state</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="k">prefix</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">acc_nbr</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">service_nbr</span><span class="p">,</span><span class="w"> </span><span class="n">hlr_id</span><span class="p">,</span><span class="w"> </span><span class="n">state_date</span><span class="p">,</span><span class="w"> </span><span class="n">acc_nbr_state</span><span class="p">,</span><span class="w"> </span><span class="n">acc_nbr_state_name</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">ic_acc_nbr</span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">ic_acc_nbr_state</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="p">(</span><span class="n">acc_nbr_state</span><span class="p">)</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="k">prefix</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">acc_nbr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&lt;MSISDN&gt;&#39;</span><span class="p">;</span>
+
+<span class="c1">-- Check SIM card state</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">iccid</span><span class="p">,</span><span class="w"> </span><span class="n">hlr_id</span><span class="p">,</span><span class="w"> </span><span class="n">state_date</span><span class="p">,</span><span class="w"> </span><span class="n">sim_state</span><span class="p">,</span><span class="w"> </span><span class="n">sim_state_name</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">ic_sim_card</span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">ic_sim_state</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="p">(</span><span class="n">sim_state</span><span class="p">)</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">iccid</span><span class="o">=</span><span class="s1">&#39;&lt;ICCID&gt;&#39;</span><span class="p">;</span>
+
+<span class="c1">-- Check order provisioning state</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">order_item_id</span><span class="p">,</span><span class="w"> </span><span class="n">state_date</span><span class="p">,</span><span class="w"> </span><span class="n">created_date</span><span class="p">,</span><span class="w"> </span><span class="k">state</span><span class="p">,</span><span class="w"> </span><span class="n">order_state_name</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">spn</span><span class="p">.</span><span class="n">sa_order</span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">spn</span><span class="p">.</span><span class="n">sa_order_state</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">spn</span><span class="p">.</span><span class="n">sa_order</span><span class="p">.</span><span class="k">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spn</span><span class="p">.</span><span class="n">sa_order_state</span><span class="p">.</span><span class="n">order_state</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">order_item_id</span><span class="o">=&lt;</span><span class="n">order_id</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<p><em>Last Updated: June 4, 2026</em></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="test-cases/SF_E2E_OCP_016/" class="btn btn-neutral float-right" title="SF_E2E_OCP_016 (First Call Activation)">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+      <span><a href="test-cases/SF_E2E_OCP_016/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2026-06-05 02:41:03.276442+00:00
+-->

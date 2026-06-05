@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Tommy" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>SF_E2E_OCP_085 (Change Main Offer) - Tommy Jun 2026 eDo Testing Practice</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SF_E2E_OCP_085 (Change Main Offer)";
+        var mkdocs_page_input_path = "test-cases/SF_E2E_OCP_085.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/sql.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/json.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Tommy Jun 2026 eDo Testing Practice
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Test Cases</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_016/">SF_E2E_OCP_016 (First Call Activation)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_058/">SF_E2E_OCP_058 (Modify Offer IPP)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_159/">SF_E2E_OCP_159 (Reconnection Postpaid)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../E2E_OCP_SF022/">E2E_OCP_SF022 (Cancel Postdating)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_162/">SF_E2E_OCP_162 (Reconnection >180 Days)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_188/">SF_E2E_OCP_188 (Starter Pack Activation)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_018/">SF_E2E_OCP_018 (SIM Replacement)</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">SF_E2E_OCP_085 (Change Main Offer)</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_001/">SF_E2E_OCP_001 (New Connection Prepaid)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SF_E2E_OCP_126/">SF_E2E_OCP_126 (Transfer Ownership)</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Tommy Jun 2026 eDo Testing Practice</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Test Cases</li>
+      <li class="breadcrumb-item active">SF_E2E_OCP_085 (Change Main Offer)</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="test-ticket-sf_e2e_ocp_085">Test Ticket SF_E2E_OCP_085<a class="headerlink" href="#test-ticket-sf_e2e_ocp_085" title="Permanent link">&para;</a></h1>
+<p><strong>Description</strong>: Change main offer with add additional offer + effective immediately</p>
+<p><strong>Pre-requisite</strong>:</p>
+<ol>
+<li>The system is running normally.</li>
+<li>Existing active postpaid subscription.</li>
+<li>The subscriber dont have pending order.</li>
+<li>The customer is not in dunning blacklist.</li>
+<li>The customer is not in internal blacklist.</li>
+<li>Under the customer, all account have no overdue amount.</li>
+</ol>
+<p><strong>Test Status:</strong> <strong><em>SUCCESS✅</em></strong></p>
+<p><strong>Steps</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">No.</th>
+<th style="text-align: left;">Step</th>
+<th style="text-align: left;">Data</th>
+<th style="text-align: left;">Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Go to 'Order Entry' GUI.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Go to 'Order Entry' GUI successfully.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Query an active postpaid subscription.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Query an active postpaid subscription successfully.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Click [Operation-&gt; Change Offer] in 'Subscriber' Tab.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">It jumps to next page successfully.</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Choose new main offer and add on additional offer, the effective time is immediate, and then click 'Next' button.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Select new main offer successfully.</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Review basic information/order fee/order item list and so on.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">The basic information/order fee/order item list and others are correct.</td>
+</tr>
+<tr>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">Select 'Has confirmed the order with customer?' and click 'Next' button.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">It jumps to next page successfully.</td>
+</tr>
+<tr>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">Review and check the T&amp;C.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Review and check the T&amp;C successfully.</td>
+</tr>
+<tr>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">In payment counter, review order fee and pay it.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Pay order fee finished (ETP).</td>
+</tr>
+<tr>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">Review and print 'Print POS Receipt'/'Print e-Receipt'/'Print e-RF'.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Review and print successfully and the information is correct.</td>
+</tr>
+<tr>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">Click 'Next' button and submit the order.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Generated order successfully.</td>
+</tr>
+<tr>
+<td style="text-align: left;">11</td>
+<td style="text-align: left;">Back to order entry page, and check the order detail.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">The order is complete and order information is correct.</td>
+</tr>
+<tr>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">Go to [Subscriber Detail] and check subscriber information.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">The subscription's status is 'Active' and additional offer is active too.</td>
+</tr>
+<tr>
+<td style="text-align: left;">13</td>
+<td style="text-align: left;">Check the notification.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">System will send notification to customer successfully.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Evidence Results:</strong></p>
+<p>Active postpaid subscription queried successfully in Order Entry:</p>
+<p><img alt="alt text" src="../../evidence/085_query.png" /></p>
+<p>Change Offer option selected, jumps to offer selection page:</p>
+<p><img alt="alt text" src="../../evidence/085_change_offer.png" /></p>
+<p>New main offer and additional offer selected, effective time set to immediate:</p>
+<p><img alt="alt text" src="../../evidence/085_select_offer.png" /></p>
+<p>Additionally, the previous main offer IPP will also be cancelled and the cancellation display is displayed correctly:</p>
+<p><img alt="alt text" src="../../evidence/085_ipp_cancel.png" /></p>
+<p>Order details reviewed (basic info, order fee, order item list) - all correct:</p>
+<p><img alt="alt text" src="../../evidence/085_order_review.png" /></p>
+<p>T&amp;C reviewed and accepted successfully:</p>
+<p><img alt="alt text" src="../../evidence/085_tnc.png" /></p>
+<p>Payment counter displayed, order fee paid successfully (ETP):</p>
+<p><img alt="alt text" src="../../evidence/085_payment.png" /></p>
+<p>POS Receipt, e-Receipt, and e-RF printed successfully with correct information:</p>
+<p><img alt="alt text" src="../../evidence/085_receipts.png" />
+<img alt="alt text" src="../../evidence/085_erf.png" /></p>
+<p>Order submitted successfully, order status shows complete:</p>
+<p><img alt="alt text" src="../../evidence/085_order_complete.png" />
+<img alt="alt text" src="../../evidence/085_order_status.png" /></p>
+<p>Subscriber Detail verified - <strong>subscription status is Active, additional offer is active</strong>:</p>
+<p><img alt="alt text" src="../../evidence/085_subscriber.png" /></p>
+<p>Notification sent to customer successfully:</p>
+<p><img alt="alt text" src="../../evidence/085_notification.png" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../SF_E2E_OCP_018/" class="btn btn-neutral float-left" title="SF_E2E_OCP_018 (SIM Replacement)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../SF_E2E_OCP_001/" class="btn btn-neutral float-right" title="SF_E2E_OCP_001 (New Connection Prepaid)">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../SF_E2E_OCP_018/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../SF_E2E_OCP_001/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
